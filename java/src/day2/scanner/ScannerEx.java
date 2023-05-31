@@ -33,6 +33,8 @@ public class ScannerEx {
 		System.out.println(ch);
 		
 		
+		
+		
 		sc.close();//clase로 닫지 않아도 크게 문제는 없지만 안쓰면 주의표시가 생김
 	}
 
