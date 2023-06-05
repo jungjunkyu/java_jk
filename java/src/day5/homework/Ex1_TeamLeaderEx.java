@@ -8,6 +8,7 @@ public class Ex1_TeamLeaderEx {
 		//학생 번호가 주어졌을 때 조장인지 조원인지 판별하는 코드를 작성하시오.(switch문으로)
 		/*input student number
 		 * 
+		 * 
 		 */
 		
 		
