@@ -1,0 +1,32 @@
+package day7.continu;
+
+public class evennumberEx {
+
+	public static void main(String[] args) {
+		//continue 문을 이용한 10 이하의 짝수 출력 예제
+		
+		
+		int i;
+		for(i=1;i<=10;i++) {
+			//i가 홀수이면 출력하는것을 건너뜀
+			if(i%2 !=0) {
+				continue;
+				
+			}
+			System.out.println(i);
+		}
+		
+		i=0;
+		while(++i<=10) {
+			if(i%2 !=0) {
+				
+				continue;
+			}
+			System.out.println(i);
+			
+		}
+		
+		
+	}
+
+}
