@@ -7,6 +7,8 @@ public class BaseballGameEx {
 		 *1~9 사이의 중복되지 않은 세 수를 맞추는 게임
 		 * 
 		 */
+		
+		
 
 	}
 
