@@ -73,7 +73,6 @@ public class InstancePolymorphismEx {
 	}
 
 }
-
 class HomeAppliances{
 	boolean power;
 	void turnOn() {
@@ -83,7 +82,7 @@ class HomeAppliances{
 		power = false;
 	}
 }
-class RemoteControl{
+class RemoteControl {
 	public void turnOn(HomeAppliances appliance) {
 		appliance.turnOn();
 		System.out.println("전원이 켜졌습니다.");
@@ -92,17 +91,21 @@ class RemoteControl{
 		appliance.turnOff();
 		System.out.println("전원이 꺼졌습니다.");
 	}
+
 }
 
 class TV extends HomeAppliances{
-	int channel;
+	int channel;		
 }
 
 class AirConditioner extends HomeAppliances{
 	double CurrentTemperature;
 	double desiredTemperature;
 }
+
 class Radio extends HomeAppliances{
+
 	double frequency;
+	
 }
 
