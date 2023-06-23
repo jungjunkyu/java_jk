@@ -16,6 +16,9 @@ public class ImgEx {
 		 * 
 		 */
 		Scanner sc = new Scanner(System.in);
+		String string = sc.nextLine();
+		System.out.println("in put : ");
+		
 		
 		
 	}
