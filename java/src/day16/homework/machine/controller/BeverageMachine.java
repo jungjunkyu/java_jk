@@ -11,9 +11,12 @@ public class BeverageMachine {
 	
 	private int money;//자판기에 있는 금액
 	
+	//음료수별 번지를 상수로 지정
 	private final static int SPRITE = 0;
 	private final static int COKE = 1;
 	private final static int FANTA = 2;
+	
+	//프로그램 종료 번호
 	private final static int EXIT = 4;
 	
 	public BeverageMachine() {
