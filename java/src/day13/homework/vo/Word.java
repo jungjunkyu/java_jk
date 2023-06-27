@@ -58,14 +58,14 @@ public class Word{
 		this.meaning[meaningCount] = meaning;
 		meaningCount++;
 	}
-	/**뜻을 제거하고 제거여부를 알려주는 메서드
+	/**뜻을 제거하고 제거 여부를 알려주는 메서드
 	 * 매개변수 : 제거할 뜻의 번호 => int num
-	 * 리턴타입 : 제거여부 => boolean
+	 * 리턴타입 : 제거 여부 => boolean
 	 * 메서드명 : removeMeaning
 	 */
 	public boolean removeMeaning(int num) {
 		if(num > meaningCount || num < 1) {
-			System.out.println("I can't work.");
+			//System.out.println("I can't work.");
 			return false;
 		}
 		//num-1번지부터 하나씩 당겨와서 덮어쓰기함.
@@ -105,8 +105,9 @@ public class Word{
 		this.title = title;
 	}
 	
-}
 	
+}
+
 
 
 
