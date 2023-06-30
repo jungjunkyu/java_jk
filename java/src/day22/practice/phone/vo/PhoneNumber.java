@@ -18,6 +18,12 @@ public class PhoneNumber {
 			this.number = number;
 		}
 		this.number = checkNumber(number)?number:"";
+		//위 코드는 아래 주석으로 풀어 쓸 수 있다.
+		/* if(checkNumber(number)) {
+		  	this.number = number;
+		 }else {
+		  	this.number = "";
+		 } */
 	}
 	//전화번호가 010-xxxx-xxxx 패턴이 맞는지 확인해주는 메서드
 	private boolean checkNumber(String num) {
