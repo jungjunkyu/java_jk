@@ -6,27 +6,28 @@ import java.net.UnknownHostException;
 public class IpEx {
 
 	public static void main(String[] args) {
-		InetAddress inetAddress = null;
+		InetAddress inetAdress = null;
 		
-		//이름이 localhost인 곳의 IP주소 정보를 가져옴.
 		try {
-			inetAddress = InetAddress.getByName("localhost");
-			System.out.println(inetAddress);
+			//이름이 localhost인 곳의 IP 주소 정보를 가져옴. 모든 PC가 같음
+			inetAdress = InetAddress.getByName("localhost");
+			System.out.println(inetAdress);
 			//네이버 사이트의 아이피 주소 조회
-			inetAddress = InetAddress.getByName("www.naver.com");
-			System.out.println(inetAddress);
+			inetAdress = InetAddress.getByName("www.naver.com");
+			System.out.println(inetAdress);
 			//내 PC의 아이피 조회
-			inetAddress = InetAddress.getLocalHost();
-			System.out.println(inetAddress);
-			InetAddress[]address = InetAddress.getAllByName("www.naver.com");
+			inetAdress = InetAddress.getLocalHost();
+			System.out.println(inetAdress);
+			InetAddress [] address = 
+				InetAddress.getAllByName("www.naver.com");
 			for(InetAddress tmp : address) {
 				System.out.println(tmp);
 			}
+			
 		} catch (UnknownHostException e) {
 			e.printStackTrace();
 		}
 		
-
 	}
 
 }

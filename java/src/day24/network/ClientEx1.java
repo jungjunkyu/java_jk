@@ -7,20 +7,22 @@ import java.net.InetSocketAddress;
 import java.net.Socket;
 import java.util.Scanner;
 
+import org.xml.sax.InputSource;
+
 public class ClientEx1 {
 
 	public static void main(String[] args) {
-		Socket socket = null;
 		int port = 5001;//서버 포트번호
 		Scanner sc = new Scanner(System.in);
-		//1.소켓생성		
-		try(Socket socket1 = new Socket();) {
-			//2.연결요청
-			socket1.connect(new InetSocketAddress(port));
-			System.out.println("[conect]");
-			//3.작업
-			OutputStream os = socket1.getOutputStream();
-			String str = sc.nextLine(); //보내려는 데이터
+		//1. 소켓생성
+		try(Socket socket = new Socket();) {
+			//2. 연결요청
+			socket.connect(new InetSocketAddress(port));
+			System.out.println("[Conect!]");
+			//3. 작업
+			//서버에 데이터 전송을 위해 OutputStream 생성
+			OutputStream os = socket.getOutputStream();
+			String str = sc.nextLine();//보내려는 데이터
 			byte [] bytes = str.getBytes();//Hi를 바이트로 변환
 			os.write(bytes);
 			os.flush();
@@ -32,9 +34,8 @@ public class ClientEx1 {
 			
 			is.close();
 			os.close();
-			
 		} catch (IOException e) {
-			System.out.println("[Connection refused");
+			System.out.println("[Connection refused!]");
 			//e.printStackTrace();
 		}
 		
