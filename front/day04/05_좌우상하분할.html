@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>분할예제</title>
+	<style>
+		.container{
+			width: 500px; height: 500px; padding: 10px;
+			box-sizing: border-box;
+			background-color: black;
+		}
+		.box{
+			width: calc(50% - 5px); height: 100%;
+			float: left;
+			background-color: blue;
+		}
+		.box2{
+			background-color: transparent; 
+			float: right;
+		}
+		.inner-box{
+			height: calc(50% - 5px); background-color: aqua;
+		}
+		.bottom-box{
+			margin-top: 10px;
+			background-color: aliceblue;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="box"></div>
+		<div class="box box2">
+			<div class="inner-box top-box"></div>
+			<div class="inner-box bottom-box"></div>
+		</div>
+	</div>
+</body>
+</html>
