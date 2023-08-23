@@ -183,3 +183,15 @@ FROM
         JOIN
     product ON OP_PR_CODE = PR_CODE
 GROUP BY OP_NUM;
+
+-- 제품별 가격 순으로 정렬했을 때 가장 비싼 제품 3개를 조회
+select * from(
+select pr_name, pr_price, row_number() over(order by pr_price desc) as 순위
+from
+product
+) as ordered_product
+where 순위 <=3;
+
+
+
+
