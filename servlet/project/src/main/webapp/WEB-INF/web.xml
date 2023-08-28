@@ -13,30 +13,10 @@
     <description></description>
     <display-name>Home</display-name>
     <servlet-name>Home</servlet-name>
-    <servlet-class>kr.kh.app.controller.Home</servlet-class>
+    <servlet-class>kr.kh.app.Home</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>Home</servlet-name>
     <url-pattern>/home</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>Signup</display-name>
-    <servlet-name>Signup</servlet-name>
-    <servlet-class>kr.kh.app.controller.Signup</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>Signup</servlet-name>
-    <url-pattern>/Signup</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>Withdraw</display-name>
-    <servlet-name>Withdraw</servlet-name>
-    <servlet-class>kr.kh.app.controller.Withdraw</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>Withdraw</servlet-name>
-    <url-pattern>/withdraw</url-pattern>
   </servlet-mapping>
 </web-app>
