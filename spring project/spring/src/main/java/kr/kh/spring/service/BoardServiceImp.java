@@ -203,3 +203,9 @@ public class BoardServiceImp implements BoardService{
 		return boardDao.selectLike(bo_num, user.getMe_id());
 	}
 }
+
+
+
+
+
+
