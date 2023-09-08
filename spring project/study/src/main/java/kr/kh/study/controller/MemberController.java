@@ -70,3 +70,9 @@ public class MemberController {
 		return "/util/message";
 	}
 }
+
+
+
+
+
+
