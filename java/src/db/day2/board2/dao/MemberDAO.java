@@ -10,7 +10,7 @@ public interface MemberDAO {
 
 	MemberVO getMember(String id);
 
-	void insertMember(@Param("id")String id, @Param("pw")String pw);
+	void insertMember(@Param("id")String id,@Param("pw")String pw);
 
 	void deleteMember(String id);
 

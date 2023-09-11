@@ -14,7 +14,7 @@ public class BoardController {
 	}
 
 	public void run() {
-		//게시글 등록, 수정, 삭제, 게시글 리스트 조회
+		// TODO Auto-generated method stub
 		
 	}
 

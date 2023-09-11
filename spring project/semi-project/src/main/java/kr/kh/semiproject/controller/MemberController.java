@@ -2,9 +2,12 @@ package kr.kh.semiproject.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import kr.kh.semiproject.service.MemberService;
+import kr.kh.semiproject.vo.MemberVO;
 
 @Controller
 public class MemberController {
@@ -16,5 +19,19 @@ public class MemberController {
 	public String memberSignup() {
 		return "member/signup";
 	}
-	
+	@PostMapping("/member/signup") //@RequestMapping(value="/member/signup", method=RequestMethod.POST)
+	public String memberSignupPost(Model model, MemberVO member) {
+		String msg , url;
+		
+		if(memberService.signup(member)) {
+			msg = "회원가입 성공!";
+			url = "/";
+		}else {
+			msg = "회원가입 실패!";
+			url = "/member/signup"; 
+		}
+		model.addAttribute("url", url);
+		model.addAttribute("msg", msg);
+		return "util/message";
+	}
 }

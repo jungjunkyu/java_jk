@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class MethodMultipleEx {
 
 	public static void main(String[] args) {
-		//정수 num을 입력받아 2,3,6,의 배수인지 아닌지 판별하는 코드를 작성하세요.
 		//System.out.println(MethodEvenNumberEx.isMultiple(4, 2));
 		int num1;
 		Scanner sc = new Scanner(System.in);

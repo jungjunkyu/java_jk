@@ -1,19 +1,16 @@
 package db.day2.board2.controller;
 
-import java.sql.Connection;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 import db.day2.board2.service.MemberService;
 import db.day2.board2.service.MemberServiceImp;
 
 public class MemberController {
-		
+	
 	private Scanner sc;
 	private MemberService memberService;
 
 	public MemberController(Scanner sc) {
-	
 		this.sc = sc;
 		memberService = new MemberServiceImp();
 	}
@@ -78,3 +75,8 @@ public class MemberController {
 		}
 	}
 }
+
+
+
+
+

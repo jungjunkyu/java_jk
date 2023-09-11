@@ -13,7 +13,7 @@ public class User extends Thread{
 	public void run() {
 		pb.deposit(name, 10000);
 	}
-
+	
 }
 
 @Data
@@ -21,7 +21,7 @@ class Passbook{
 	private int balance;
 	//예금
 	public synchronized void deposit(String name, int money) {
-		this.balance +=money;
+		this.balance += money;
 		
 		try {
 			Thread.sleep(2000);
@@ -31,5 +31,9 @@ class Passbook{
 		System.out.println(name + " : " + money);
 		System.out.println("balance : " + this.balance);
 	}
-
 }
+
+
+
+
+

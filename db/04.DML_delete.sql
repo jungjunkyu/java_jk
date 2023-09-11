@@ -14,3 +14,6 @@ WHERE
   경우에만 적용이 되도록 설정이 되어 있음 
 - 해결하려면 Edit > Preperences... > SQL Editor > 제일 하단에 Safe update ...을 체크 해제하면 됨 
 */
+
+
+

@@ -6,7 +6,7 @@ import java.util.Objects;
 import lombok.Data;
 
 @Data
-public class Student implements Serializable{
+public class Student implements Serializable {
 
 	private static final long serialVersionUID = 107837677974301860L;
 	private String num; //학번
@@ -46,6 +46,7 @@ public class Student implements Serializable{
 	
 	
 }
+
 
 
 

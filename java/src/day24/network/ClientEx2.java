@@ -11,7 +11,7 @@ public class ClientEx2 {
 
 	public static void main(String[] args) {
 		int port = 5001;//1.포트번호 설정
-		String ip = "192.168.30.189";//1-1. 서버 IP설정
+		String ip = "192.168.30.199";//1-1. 서버 IP설정
 		Socket socket = new Socket();//2. 소켓 생성
 		try{
 			//3. 서버에게(IP,posrt) 연결 요청
@@ -52,4 +52,3 @@ public class ClientEx2 {
 		}
 	}
 }
-

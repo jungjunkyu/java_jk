@@ -34,9 +34,7 @@ public class StarEx3 {
 			}
 			//엔터
 			System.out.println();
-		
 		}
 	}
-		
-	
+
 }

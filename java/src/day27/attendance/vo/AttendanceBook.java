@@ -8,8 +8,8 @@ import java.util.List;
 import lombok.Data;
 
 @Data
-public class AttendanceBook implements Serializable{
-
+public class AttendanceBook implements Serializable {
+	
 	private static final long serialVersionUID = 2595927543542941134L;
 	private List<Attendance> list = new ArrayList<>();
 	private List<Student> stdList = new ArrayList<>();
@@ -66,6 +66,7 @@ public class AttendanceBook implements Serializable{
 	}
 	
 }
+
 
 
 

@@ -124,3 +124,5 @@ alter table course drop constraint course_ibfk_2;
 -- 수강 테이블에 student_num의 외래키 제약조건 추가
 alter table course add constraint FK_STUDENT_NUM 
 	foreign key(student_num) references student(num);
+
+

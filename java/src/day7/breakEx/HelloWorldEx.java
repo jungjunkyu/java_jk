@@ -1,20 +1,17 @@
-package day7.breakEx;
+package day7.breakex;
 
 public class HelloWorldEx {
 
 	public static void main(String[] args) {
-		//Hello World를 5번 찍는 
-		
-		
-		int i=1;
+		int i = 1;
 		while(true) {
-			System.out.println("Hello World!");
+			System.out.println("Hello world!");
+			
 			if(i==5) {
 				break;
 			}
-			++i;
+			i++;
 		}
-
 	}
 
 }

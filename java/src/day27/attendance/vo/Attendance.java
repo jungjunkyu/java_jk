@@ -8,7 +8,7 @@ import java.util.Objects;
 import lombok.Data;
 
 @Data
-public class Attendance implements Serializable{
+public class Attendance implements Serializable {
 
 	private static final long serialVersionUID = -860094218489134759L;
 	private Date date;//출석날짜
@@ -50,6 +50,7 @@ public class Attendance implements Serializable{
 	}
 	
 }
+
 
 
 

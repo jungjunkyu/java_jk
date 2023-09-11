@@ -83,7 +83,7 @@ class Rect1{
 		leftUpX = x;
 		leftUpY = y;
 		rightDownX = x + w;
-		rightDownY = x + h;
+		rightDownY = y + h;
 	}
 }
 
@@ -140,6 +140,7 @@ class Rect2{
 		rightDown.move(x+w, y+h);
 	}
 }
+
 
 
 

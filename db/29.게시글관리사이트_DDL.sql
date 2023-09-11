@@ -22,3 +22,4 @@ CREATE TABLE `board` (
   KEY `bo_me_id_idx` (`bo_me_id`),
   CONSTRAINT `bo_me_id` FOREIGN KEY (`bo_me_id`) REFERENCES `member` (`me_id`) ON DELETE CASCADE
 );
+

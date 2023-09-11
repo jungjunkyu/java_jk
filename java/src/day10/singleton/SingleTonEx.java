@@ -1,7 +1,7 @@
 package day10.singleton;
 
 public class SingleTonEx {
-	
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		//SamsungCompany company = new SamsungCompany();
@@ -28,6 +28,7 @@ class SamsungCompany{
 		return company;
 	}
 }
+
 
 
 

@@ -5,11 +5,6 @@ import java.util.Scanner;
 public class UpDownEx {
 
 	public static void main(String[] args) {
-		//updown게임을 하는 코드를 작성
-		//한판이 끝나면 더 할것인지 물어서 n을 입력하면 종료, y를 입력하면 이어서 게임진행
-		
-		
-			
 		int min = 1, max = 100;
 		char menu;
 		int num, random;
@@ -46,7 +41,6 @@ public class UpDownEx {
 		}while(menu != 'n');
 		
 		sc.close();
-
-		
 	}
+
 }

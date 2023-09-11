@@ -67,3 +67,11 @@ public class MethodPrintCharEx {
 		return str;
 	}
 }
+
+
+
+
+
+
+
+

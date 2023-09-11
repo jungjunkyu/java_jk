@@ -8,7 +8,6 @@ public class SynchronizedEx1 {
 		User user2 = new User("Hong ga", pb);
 		user1.start();
 		user2.start();
-		
 
 	}
 

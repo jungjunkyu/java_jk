@@ -1,8 +1,5 @@
 package db.day2.board2.controller;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
 import java.util.Scanner;
 
 public class Main {
@@ -27,7 +24,6 @@ public class Main {
 		}while(menu != EXIT);
 		
 		sc.close();
-		
 	}
 	
 	private static void runMenu(int menu) {
@@ -45,7 +41,6 @@ public class Main {
 		default:
 			System.out.println("[잘못된 메뉴입니다.]");
 		}
-		
 	}
 	private static void printMenu() {
 		System.out.println("=======메뉴=======");
@@ -56,6 +51,3 @@ public class Main {
 		System.out.print("메뉴 선택 : ");
 	}
 }
-
-
-

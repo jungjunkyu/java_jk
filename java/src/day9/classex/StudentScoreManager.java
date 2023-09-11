@@ -8,9 +8,9 @@ public class StudentScoreManager {
 		Scanner sc = new Scanner(System.in);
 		sc.close();
 		//korScore는 인스턴스, 객체
-		//Score1 korScore = new Score1(1,2 "korean Language");
+		//Score1 korScore = new Score1(1,2,"korean Language");
 		Score1 korScore = new Score1();
-		korScore.title = "Korean Language";
+		korScore.title = "korean Language";
 		korScore.grade = 1;
 		korScore.semester = 2;
 		Score1 engScore = new Score1(1,2,"English");
@@ -18,27 +18,24 @@ public class StudentScoreManager {
 	}
 
 }
-//성적클래스
-
+//성적 클래스
 class Score1{
-	String title;//과목명
-	int grade;//학년
-	int semester;//학기
-	double total;//총점
-	double midExam;//중간고사
-	double finalExam;//기말고사
+	String title;//과목명			
+	int grade;//학년			
+	int semester;//학기			
+	double total;//총점수			
+	double midExam;//중가고사			
+	double finalExam;//기말			
 	double performance;//수행평가
 	//Score1 클래스의 기본 생성자
 	public Score1() {
-		/*
-		 * title의 기본값은? null
+		/* title의 기본값은? null
 		 * grade의 기본값은? 0
 		 * total의 기본값은? 0.0
- 		 */
+		 * */
 		title = "";
 		grade = 1;
 		semester = 1;
-		
 	}
 	public Score1(int _grade, int _semester, String _title) {
 		grade = _grade;
@@ -98,14 +95,19 @@ class Score1{
 		this.performance = performance;
 	}
 	
-}	
-//학생클래스
-class student1{
+}
+//학생 클래스
+class Student1{
 	String name;//이름
-	String residentNumber;//주민번호
+	String residentNumber;//주민번호(O)		
 	int grade;//학년
 	int classNum;//반
 	int number;//번호
-	int admissionTear;//입학년도
-	Score1 korScore, engScore, mathScore;//국어,영어,수학성적
+	int admissionYear;//입학년도
+	Score1 korScore, engScore, mathScore;//국어, 영어, 수학 성적
 }
+
+
+
+
+

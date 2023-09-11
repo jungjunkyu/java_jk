@@ -43,3 +43,10 @@ public class Customer {
 		System.out.println("전화번호 : " + phoneNumber);
 	}
 }
+
+
+
+
+
+
+

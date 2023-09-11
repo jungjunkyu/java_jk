@@ -189,3 +189,4 @@ ALTER TABLE `review` ADD CONSTRAINT `FK_member_TO_review_1` FOREIGN KEY (
 REFERENCES `member` (
 	`me_id`
 );
+

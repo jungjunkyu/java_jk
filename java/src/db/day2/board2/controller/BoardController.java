@@ -13,7 +13,6 @@ public class BoardController {
 	private BoardService boardService;
 	
 	public BoardController(Scanner sc) {
-		
 		this.sc = sc;
 		boardService = new BoardServiceImp();
 	}
@@ -44,7 +43,7 @@ public class BoardController {
 		case 5:
 			break;
 		default:
-			System.out.println("[잘못된 메뉴]");	
+			System.out.println("[잘못된 메뉴]");
 		}
 		
 	}
@@ -54,34 +53,31 @@ public class BoardController {
 		for(BoardVO tmp : list) {
 			System.out.println(tmp);
 		}
-		
 	}
 
 	private void insertBoard() {
 		//제목, 작성자 id
-		System.out.println("제목 : ");
+		System.out.print("제목 : ");
 		sc.nextLine();
 		String title = sc.nextLine();
-		System.out.println("ID : ");
+		System.out.print("ID  : ");
 		String id = sc.next();
-		if(boardService.insertBoard(title,id)) {
-			System.out.println("[게시글 작성 실패!]");
+		if(boardService.insertBoard(title, id)) {
+			System.out.println("[게시글 작성 성공!]");
 		}else {
-			System.out.println("게시글 작성 성공!");
+			System.out.println("게시글 작성 실패!");
 		}
-		
 	}
 
 	private void printMenu() {
 		System.out.println("=====게시판 메뉴=====");
-		System.out.println("1. 게시글 등록.");
-		System.out.println("2. 게시글 수정.");
-		System.out.println("3. 게시글 삭제.");
-		System.out.println("4. 게시글 확인.");
-		System.out.println("5. 뒤로가기.");
+		System.out.println("1.게시글 등록");
+		System.out.println("2.게시글 수정");
+		System.out.println("3.게시글 삭제");
+		System.out.println("4.게시글 확인");
+		System.out.println("5.뒤로가기");
 		System.out.println("==================");
 		System.out.print("메뉴 선택 : ");
-		
 	}
 
 }

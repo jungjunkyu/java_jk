@@ -13,6 +13,7 @@ import db.day2.board2.dao.MemberDAO;
 import db.day2.board2.vo.MemberVO;
 
 public class MemberServiceImp implements MemberService{
+
 	
 	private MemberDAO memberDao;
 	private InputStream inputStream;
@@ -42,7 +43,7 @@ public class MemberServiceImp implements MemberService{
 		//0이면 회원을 등록 
 		memberDao.insertMember(id, pw);
 		session.commit();
-		//회원목록을 조회(원래는 필요없는 기능인데 mybatis장점을 설명하려고 추가)
+		//회원 목록을 조회(원래는 필요 없는 기능인데 mybatis 장점을 설명하려고 추가)
 		ArrayList<MemberVO> list = memberDao.selectMemberList();
 		for(MemberVO tmp : list) {
 			System.out.println(tmp);

@@ -14,10 +14,11 @@ import db.day2.board2.dao.MemberDAO;
 import db.day2.board2.vo.BoardVO;
 
 public class BoardServiceImp implements BoardService{
+
 	private BoardDAO boardDao;
 	private InputStream inputStream;
 	private SqlSession session;
-
+	
 	public BoardServiceImp() {
 		String resource = "db/day2/board2/config/mybatis-config.xml";
 		try {
@@ -32,7 +33,7 @@ public class BoardServiceImp implements BoardService{
 
 	@Override
 	public boolean insertBoard(String title, String id) {
-		if(boardDao.insertBoard(title,id) !=0) {
+		if(boardDao.insertBoard(title,id) != 0) {
 			session.commit();
 			return true;
 		}

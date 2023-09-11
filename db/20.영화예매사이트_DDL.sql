@@ -371,3 +371,4 @@ ALTER TABLE `like` ADD CONSTRAINT `FK_review_TO_like_1` FOREIGN KEY (
 REFERENCES `review` (
 	`re_num`
 );
+

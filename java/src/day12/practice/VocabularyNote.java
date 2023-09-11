@@ -54,8 +54,9 @@ public class VocabularyNote {
 		wordList[wordCount++] = new Word(word);
 	}
 	
-	/**단어가 주어지면 단어장에서 추가하는 메서드(단어와 뜻을 넘겨주는 경우)
-	 * 매개변수 : 단어와 뜻 => String title, String meaning
+	/**단어와 뜻이 주어지면 없는 단어이면 새로 단어를 추가하고,
+	 * 있는 단어이면 뜻만 새로 추가하는 메서드(단어와 뜻을 넘겨주는 경우)
+	 * 매개변수 : 단어와 뜻 => String title, String meaning 
 	 * 리턴타입 : 없음 => void
 	 * 메서드명 : insert
 	 */
@@ -70,43 +71,42 @@ public class VocabularyNote {
 		if(index == -1) {
 			//단어와 뜻을 이용해 단어 객체를 생성한 후 단어장에 추가
 			wordList[wordCount++] = new Word(title, meaning);
-			return;	
+			return;
 		}
 		//있는 단어이면 뜻을 추가.
 		wordList[index].addMeaning(meaning);
 	}
-		
-	/**단어가 주어지면 단어장에서 삭제하는 메서드(단어와 뜻을 넘겨주는 경우)
-	 * 매개변수 : 삭제 할 단어 => String title
+	/**단어가 주어지면 단어장에서 삭제하는 메서드
+	 * 매개변수 : 삭제할 단어 => String title
 	 * 리턴타입 : 없음 => void
-	 * 메서드명 : 
+	 * 메서드명 : delete
 	 */
 	public void delete(String title) {
-		//단어가 어디있는지 찾아야함.
+		//단어가 어디있는지 찾아야 함.
 		int index = indexOf(title);
-		//단어가 단어장에 없으면 알림 메세지 출력 후 종료
-		if(index ==-1) {
-			System.out.println("no word found");
-			return;
+		//단어가 단어장에 없으면 알림 메세지 출력후 종료
+		if(index == -1) {
+			System.out.println("No words found");
+			return ;
 		}
 		//찾은 위치부터 한칸씩 밀어줌.
-		for(int i = index; i < wordCount-1;i++) {
+		for(int i = index; i < wordCount-1; i++) {
 			wordList[i] = wordList[i+1];
 		}
-		//단어의 개수를 하나 줄여줌.
+		//단어의 개수를 하나 줄여줌
 		wordCount--;
 		//마지막 단어를 비워줌(null)
-		wordList[wordCount]=null;
+		wordList[wordCount] = null;
 	}
 	/**단어가 주어지면 단어가 있는 위치를 알려주는 메서드
 	 * 단어가 없으면 -1
 	 * 매개변수 : 단어 => String title
 	 * 리턴타입 : 위치 => 번지 => 정수 => int
 	 * 메서드명 : indexOf
-	 */
+	 * */
 	public int indexOf(String title) {
 		//단어장에 등록된 단어들을 조회
-		for(int i = 0;i<wordCount;i++) {
+		for(int i = 0; i<wordCount; i++) {
 			//단어가 같으면 i번지를 리턴
 			if(wordList[i].getTitle().equals(title)) {
 				return i;
@@ -118,51 +118,61 @@ public class VocabularyNote {
 	
 	/**단어가 주어지면 단어장에 해당 단어를 출력하는 메서드
 	 * 매개변수 : 단어 => String title
-	 * 리턴타입 : void
+	 * 리턴타입 : 없음 => void
 	 * 메서드명 : search
 	 */
 	public void search(String title) {
 		int index = indexOf(title);
 		
-		if(index ==-1) {
-			System.out.println("no word found");
-			return;
+		if(index == -1) {
+			System.out.println("No words found");
+			return ;
 		}
-		wordList[index].print();		
+		
+		wordList[index].print();
 	}
 	
-	
-	
 	/**단어와 수정할 뜻의 번호와 수정할 뜻이 주어지면 단어의 뜻을 수정하는 메서드
-	 * 매개변수 : 단어, 수정할 뜻 번호, 수정할 뜻 => String tile, int meaningIndex, String meaning
-	 * 리턴타입 : void
-	 * 메서드명 : updateMeaning
+	 * 매개변수 : 단어, 수정할 뜻 번호, 수정할 뜻
+	 * 		=> String title, int meaningIndex, String meaning
+	 * 리턴타입 : 없음 => void
+	 * 메서드명 : updateMeaing
 	 */
 	public void updateMeaning(String title, int meaningIndex, String meaning) {
-		
+
 		int index = indexOf(title);
+		
 		if(index == -1) {
-			System.out.println("no word found");
-			return;
+			System.out.println("No words found");
+			return; 
 		}
+		
 		if(!wordList[index].updateMeaning(meaningIndex, meaning)) {
 			System.out.println("Wrong number");
 		}
+		
 	}
 	
 	/**단어와 수정할 단어가 단어가 주어지면 단어를 수정하는 메서드
 	 * 매개변수 : 단어와 수정할 단어 => String title, String updateTitle
-	 * 리턴타입 : void
+	 * 리턴타입 : 없음 => void
 	 * 메서드명 : updateTitle
 	 */
-	public void updateTilte(String title, String updateTitle) {
+	public void updateTitle(String title, String updateTitle) {
 		int index = indexOf(title);
-				
+		
 		if(index == -1) {
-			System.out.println("no word found");
-			return;
+			System.out.println("No words found");
+			return; 
 		}
+		
 		wordList[index].setTitle(updateTitle);
 	}
 }
+
+
+
+
+
+
 

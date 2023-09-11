@@ -3,29 +3,28 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>margin예제</title>
+	<title>margin 예제</title>
 	<style>
 		/* 
-		margin특징
+		margin 특징
 		- 요소의 좌우 가운데 정렬이 가능(block태그)
 		- margin끼리 겹치면 큰 값이 적용
-		 */
-		 .container{
-			background-color: rgb(255, 0, 34); height: 300px;
-		 }
-		 .box{
-			width: 300px; height: 100%; background-color: black;
+		*/
+		.container{
+			background-color: yellow; height: 300px;
+		}
+		.box{
+			width: 300px; height: 100%; background-color: red;
 			margin: 0 auto;
-		 }
-		 .inner-box{
+		}
+		.inner-box{
 			margin-bottom: 10px;
-			height: 100px;
-			background-color: greenyellow;
+			height: 100px; background-color: aliceblue;
 			text-align: center;
-		 }
-		 .inner-box+.inner-box{
+		}
+		.inner-box+.inner-box{
 			margin-top: 20px;
-		 }
+		}
 	</style>
 </head>
 <body>

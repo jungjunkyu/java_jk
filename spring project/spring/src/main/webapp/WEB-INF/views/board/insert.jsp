@@ -9,6 +9,17 @@
 </head>
 <body>
 	<h1>게시글 등록</h1>
+	${typeList}
+	<form action="<c:url value='/board/insert'/>" method="post" enctype="multipart/form-data">
+		<input type="hidden" name="bo_ori_num" value="${bo_ori_num}">
+		<div class="form-group">
+			<label>게시판명</label>
+			<select class = "form-control" name="bo_bt_num">
+				<c:forEach items="${typeList}" va="type">
+					<option value = "${type.bt_num}">
+				</c:forEach>
+			</select>
+		</div>
 	<form action="<c:url value='/board/insert'/>" method="post" enctype="multipart/form-data">
 		<input type="hidden" name="bo_ori_num" value="${bo_ori_num}">
 		<div class="form-group">
@@ -33,7 +44,12 @@
 	</form>
 	
 	<script>
-      $('#summernote').summernote({
+    if(${typeList.size()}==0){
+    	alert('작성가능한게시판이 없습니다.');
+    	
+    }
+	
+	$('#summernote').summernote({
         placeholder: '내용을 입력하세요.',
         tabsize: 2,
         height: 400
