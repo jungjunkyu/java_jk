@@ -19,6 +19,9 @@ public class LoginInterceptor extends HandlerInterceptorAdapter {
 
 		if(user != null) {
 			request.getSession().setAttribute("user", user);
+			if(user.isAutoLigin()) {
+				Cookie cookie = new Cookie("loginCookie", )
+			}
 		}
 	}
 }

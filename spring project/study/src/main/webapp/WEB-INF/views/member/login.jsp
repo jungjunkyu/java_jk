@@ -12,7 +12,14 @@
 	<form action="<c:url value='/member/login'/>" method="post">
 		<input type="text" name="me_id" placeholder="아이디" required> <br>
 		<input type="password" name="me_pw" placeholder="비번" required> <br>
+		<div class = "form-check-inline">
+			<label class = "form-check-label">
+				<input type="checkbox" class="form-check-input" value="true" name="autoLogin">자동로그인
+			</label>
+		</div>
+		
 		<button>로그인</button>
 	</form>
+	
 </body>
 </html>
