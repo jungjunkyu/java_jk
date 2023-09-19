@@ -6,6 +6,6 @@
   <typeAliases>
   	<typeAlias type="kr.kh.spring.vo.MemberVO" alias="MemberVO"/>
   	<typeAlias type="kr.kh.spring.vo.BoardVO" alias="BoardVO"/>
+  </typeAliases>
   
-  </typeAliases>  
 </configuration>
