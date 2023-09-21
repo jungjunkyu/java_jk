@@ -12,4 +12,6 @@ public interface MemberService {
 
 	MemberVO getMemberBySession(String session_id);
 
+	Object checkId(String id);
+
 }
