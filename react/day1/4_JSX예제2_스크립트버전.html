@@ -3,20 +3,20 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>JSX예제2-스크립트</title>
-	<script src="//code.jquery.com/jquery-3.6.1.js"></script>	
+	<title>JSX 예제2</title>
+	<script src="//code.jquery.com/jquery-3.6.1.js"></script>
 </head>
 <body>
 	<div id="container">
 		<div>
-			<h1>클릭수 : 0</h1>
-			<button>클릭</button>
-		</div>		
+			<h1>클릭 수 : 0</h1>
+			<button>클릭</button> 
+		</div>
 	</div>
 	<script>
 		let counter = 0;
-		//JQuery방식
 		/*
+		//JQuery 방식
 		$('button').click(function(){
 			counter++;
 			$('h1').text(`클릭 수 : ${counter}`);
@@ -27,7 +27,7 @@
 		let h1 = document.getElementsByTagName('h1')[0];
 		btn.addEventListener('click',()=>{
 			counter++;
-			h1.innerText=`클릭 수 : ${counter}`;
+			h1.innerText = `클릭 수 : ${counter}`;
 		})
 	</script>
 </body>

@@ -10,38 +10,31 @@
 </head>
 <body>
 	<div id="container">
-		<!--
-			<div>
-				<h1>클릭수 : 0</h1>
-				<button>클릭</button>
-			</div>
-		-->
 	</div>
 	<script type="text/babel">
-		
-		//넣을요소
-		const container = document.getElementById('container');
-		//요소생성
+
+		//넣을 요소
+		const container = 
+			document.getElementById('container');
+		//요소 생성
 		function Elemnt(){
-			//React.useState(초기값) : 0번지에 값을, 1번지에는 setter 함수를 생성하여 반환
-			/*
-			let data = React.useState(0);
-			let counter = data[0]
-			let setCounter = data[1]
+			//React.userState(초기값) : 0번지에 값을, 1번지에는 setter 함수를 생성하여 반환
+			/*let data = React.useState(0);
+			let counter = data[0];
+			let setCounter = data[1];
 			*/
 			let [counter, setCounter] = React.useState(0);
-			function onClick() { 
-				setCounter(counter +1);
-				
-			};
-			return(
+			function onClick(){
+				setCounter(counter + 1);
+			}
+			return (
 				<div>
-					<h1>클릭수 : {counter}</h1>
+					<h1>클릭 수 : {counter}</h1>
 					<button onClick={onClick}>클릭</button>
 				</div>
 			);
 		}
-		//요소배치
+		//요소 배치
 		ReactDOM.render(<Elemnt/>, container);
 	</script>
 </body>
