@@ -1,0 +1,14 @@
+@charset "UTF-8";
+.footer{
+  height: 150px; background-color: gray; padding: 30px;
+
+}
+.body{
+  min-height: calc(100vh - 56px - 210px);
+  background-color: aqua;
+  border: 3px solid black;
+}
+.box1{
+  height: 210px; width: 50%; border: 3px solid black;
+}
+
