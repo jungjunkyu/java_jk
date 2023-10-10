@@ -3,13 +3,18 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< Updated upstream
 	<title>Document</title>
+=======
+	<title>prop types 복습 예제</title>
+>>>>>>> Stashed changes
 	<script crossorigin src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
 	<script crossorigin src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
 	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 	<script src="https://unpkg.com/prop-types@15.7.2/prop-types.js"></script>
 </head>
 <body>
+<<<<<<< Updated upstream
 	<!--
 		버튼1, 버튼2, 버튼3, ... , 버튼5로 된 버튼 5개를 화면에 배치해보세요.
 	-->
@@ -21,12 +26,26 @@
 			return (
 				<button 
 					style={{backgroundcolor : color}}
+=======
+	<!-- 
+		리액트를 이용해서
+		버튼1, 버튼2, ..., 버튼5로 된 버튼 5개를 화면에 배치해보세요.
+	 -->
+	<div id="root"></div>
+	<script type="text/babel">
+		const root = document.getElementById('root');
+		function Btn({text, color, fontSize}){
+			return (
+				<button
+					style={{backgroundColor : color, fontSize : fontSize}}
+>>>>>>> Stashed changes
 				>{text}</button>
 			)
 		}
 		function App(){
 			return (
 				<div>
+<<<<<<< Updated upstream
 					<Btn text="버튼1" color={"red"}/>
 					<Btn text="버튼2" color='tomato'/>
 					<Btn text="버튼3" color='black'/>
@@ -41,6 +60,21 @@
 			fontsize : propsTypes.number
 		}
 
+=======
+					<Btn text="버튼1" color={"red"} fontSize={30} />
+					<Btn text="버튼2" color="tomato" />
+					<Btn text="버튼3" color="#00ff00" />
+					<Btn text="버튼4" color="gray" />
+					<Btn text="버튼5" />
+				</div>
+			)
+		}
+		Btn.propTypes = {
+			text : PropTypes.string.isRequired,
+			color: PropTypes.string,
+			fontSize : PropTypes.number
+		}
+>>>>>>> Stashed changes
 		ReactDOM.render(<App/>, root);
 	</script>
 </body>

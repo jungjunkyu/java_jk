@@ -3,12 +3,17 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< Updated upstream
 	<title>Document</title>
+=======
+	<title>props 복습 예제</title>
+>>>>>>> Stashed changes
 	<script crossorigin src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
 	<script crossorigin src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
 	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 <body>
+<<<<<<< Updated upstream
 	<!--
 		버튼1, 버튼2, 버튼3, ... , 버튼5로 된 버튼 5개를 화면에 배치해보세요.
 	-->
@@ -33,14 +38,42 @@
 			return (
 				<button 
 					style={{backgroundcolor : color}}
+=======
+	<!-- 
+		리액트를 이용해서
+		버튼1, 버튼2, ..., 버튼5로 된 버튼 5개를 화면에 배치해보세요.
+	 -->
+	<div id="root"></div>
+	<script type="text/babel">
+		const root = document.getElementById('root');
+
+		/*
+		let|const|var 함수명 = (매개변수들) =>{
+
+		}
+		*/
+		const Btn1 = () => <button>버튼1</button>;
+		const Btn2 = () => <button>버튼2</button>;
+		const Btn3 = () => <button>버튼3</button>;
+		const Btn4 = () => <button>버튼4</button>;
+		const Btn5 = () => <button>버튼5</button>;
+		
+		function Btn({text, color, fontSize}){
+			return (
+				<button
+					style={{backgroundColor : color, fontSize : fontSize}}
+>>>>>>> Stashed changes
 				>{text}</button>
 			)
 		}
 
+<<<<<<< Updated upstream
 
 
 
 
+=======
+>>>>>>> Stashed changes
 		function App(){
 			return (
 				<div>
@@ -48,6 +81,7 @@
 					<Btn2/>
 					<Btn3/>
 					<Btn4/>
+<<<<<<< Updated upstream
 					<Btn5/>	
 					<br/>
 				
@@ -59,6 +93,19 @@
 				</div>
 			)
 		}
+=======
+					<Btn5/>
+					<br/>
+					<Btn text="버튼1" color={"red"} fontSize={30} />
+					<Btn text="버튼2" color="tomato" />
+					<Btn text="버튼3" color="#00ff00" />
+					<Btn text="버튼4" color="gray" />
+					<Btn text="버튼5" />
+				</div>
+			)
+		}
+
+>>>>>>> Stashed changes
 		ReactDOM.render(<App/>, root);
 	</script>
 </body>

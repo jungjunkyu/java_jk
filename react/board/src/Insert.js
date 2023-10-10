@@ -33,4 +33,9 @@ function Insert(){
 	)
 }
 
+<<<<<<< Updated upstream
 export default Insert;
+=======
+export default Insert;
+
+>>>>>>> Stashed changes
